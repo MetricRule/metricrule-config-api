@@ -4,7 +4,7 @@ package metricrule.config.api;
 
 option go_package = "github.com/metricrule-config-api/proto/metricconfigpb";
 
-message SidecarConfig {    
+message AgentConfig {    
     // Configuration for the data from the input tensor to record as metrics.
     // Each entry represents a separate metric.
     // Optional. If empty, no input data is recorded as metrics.
