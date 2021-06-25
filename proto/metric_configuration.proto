@@ -67,7 +67,7 @@ message ValueMetric {
 
     // Optional. Configured bins to bucket the values into.
     // If missing, will use instrumentation defaults.
-    repeated float bins = 2;
+    repeated BinConfig bins = 2;
 }
 
 // A key and value to associate with each metric.
@@ -92,6 +92,16 @@ message ValueConfig {
         int64 integer_value = 101;
 
         float float_value = 102;
+    }
+}
+
+// Configuration for a value for a bin boundary.
+message BinConfig {
+    // Required. A single configured value.
+    oneof static_value {
+        int64 integer_value = 100;
+
+        float float_value = 101;
     }
 }
 
